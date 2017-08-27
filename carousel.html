@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>图片轮播</title>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="carousel.js"></script>
+</head>
+<body>
+<style type="text/css">
+*{
+	padding: 0;
+	margin: 0;
+}
+	#image-container{
+		width: 500px;
+		height: 300px;
+		margin: 0 auto;
+	}
+
+	.image-list{
+		position: relative;
+		height: 300px;
+		overflow: hidden;
+	}
+
+	.image-list ul{
+		position: relative;
+	}
+
+	.image-list li{
+		width: 500px;
+	    list-style: none;
+	    height: 300px;
+	    overflow: hidden;
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    bottom: 0;
+	}
+
+	.image-list li:nth-child(1){
+		z-index: 5;
+	}
+
+	.image-list li:nth-child(2){
+		z-index: 4;
+	}
+
+	.image-list li:nth-child(3){
+		z-index: 3;
+	}
+
+	.image-list li:nth-child(4){
+		z-index: 2;
+	}
+
+	.image-list li img{
+		width: 100%;
+		min-height: 300px;
+	}
+
+</style>
+<div id="image-container">
+	<div class="image-list">
+		<ul id="show-image">
+		</ul>
+	</div>
+</div>
+
+</body>
+</html>
