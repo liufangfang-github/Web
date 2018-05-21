@@ -1,0 +1,10 @@
+var obj = document.getElementById("scroll");
+        obj.onscroll = function() {
+            var scrollTop = obj.scrollTop;
+            var clientHeight = obj.clientHeight;
+            var scrollHeight = obj.scrollHeight;
+            if (scrollTop + clientHeight == scrollHeight) {
+                console.log("滚动到底部");
+                obj.scrollTop = 0
+            }
+        };
