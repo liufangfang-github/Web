@@ -1,0 +1,22 @@
+function findIndex(item,target){
+	let len=item.length;
+	let _index = parseInt(len/2);
+	if(item[_index] == target) return _index;
+	else if(item[_index]>target){
+		let new_item_front = item.slice(0,_index);
+		if(new_item_front.length >2){
+			findIndex(new_item_front,target);
+		}else{
+			return item[0]==target?0:-1;
+		}
+	}else{
+		let new_iten_end = item.slice(_index,len);
+		if(new_iten_end.length >2){
+			findIndex(new_iten_end,target);
+		}else{
+			return item[len-1]==target?(len-1):-1;
+		}
+	}
+
+	return -1;
+}
